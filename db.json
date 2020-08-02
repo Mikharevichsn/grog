@@ -1,0 +1,34 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "json-server",
+            "author": "Вася"
+        },
+        {
+            "id": 2,
+            "title": "privet",
+            "author": "Петя"
+        },
+        {
+            "id": 3,
+            "title": "hello",
+            "author": "Маша"
+        },
+        {
+            "id": 4,
+            "title": "fake title",
+            "author": "Иннокентий"
+        }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "body": "some comment",
+            "postId": 1
+        }
+    ],
+    "profile": {
+        "name": "typicode"
+    }
+}
