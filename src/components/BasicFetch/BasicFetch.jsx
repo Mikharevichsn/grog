@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { BASIC_FETCH_UL_CLASS, FETCH_URL_JSON_SERVER } from "../../constants";
+
 
 // Сделайте запрос в базу данных localhost:3001/posts
 // Отрендерите каждый пост в формате ul>li
@@ -8,14 +10,14 @@ export function BasicFetch() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3001/posts/")
+    fetch(FETCH_URL_JSON_SERVER)
       .then((resp) => resp.json())
       .then((data) => setData(data));
   }, []);
 
   return (
     <div>
-      <ul className="ul-cy">
+      <ul className={BASIC_FETCH_UL_CLASS}>
         {data &&
           data.map((item) => {
             return (

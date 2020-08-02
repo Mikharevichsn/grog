@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BUTTON_CLASS, DIV_CLASS, INPUT_CLASS } from "../../constants";
 
 // Создайте input в который можно вводить текст
 // Создайте кнопку после нажатия на которую текст будет добавляться в стейт
@@ -12,17 +13,22 @@ const InterState = (props) => {
   return (
     <>
       <input
-        className={"input-cy"}
+        className={INPUT_CLASS}
         onChange={(e) => setInput(e.target.value)}
       />
-      <button className={"button-cy"} onClick={() => setWords((state) => [...state, input])}>
+      <button
+        className={BUTTON_CLASS}
+        onClick={() => setWords((state) => [...state, input])}
+      >
         Добавить
       </button>
       {words &&
         words.map((item, i) => {
           return (
-            <div className="item-cy">
-              {i}{item}{i}
+            <div className={DIV_CLASS}>
+              {i}
+              {item}
+              {i}
             </div>
           );
         })}

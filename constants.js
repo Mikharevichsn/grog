@@ -1,1 +1,0 @@
-export const BASIC_DIV_CLASS = ".data-cy"

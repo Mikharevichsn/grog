@@ -1,14 +1,18 @@
 import React, { useState } from "react";
+import { DIV_CLASS, INPUT_CLASS } from "../../constants";
 
-// Создайте input в который можно вводить текст
-// Затем создайте div в котором будет дублироваться текст из инпута
-const BasicState = (props) => {
+// Создайте input(INPUT_CLASS) в который можно вводить текст
+// Затем создайте div(DIV_CLASS) в котором будет отображаться текст из инпута
+const BasicState = () => {
   const [data, setData] = useState("");
 
   return (
     <>
-      <input className={"input-cy"} onChange={(e) => setData(e.target.value)} />
-      <div className="data-cy">{data}</div>
+      <input
+        className={INPUT_CLASS}
+        onChange={(e) => setData(e.target.value)}
+      />
+      <div className={DIV_CLASS}>{data}</div>
     </>
   );
 };
