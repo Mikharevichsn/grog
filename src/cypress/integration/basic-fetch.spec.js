@@ -1,8 +1,12 @@
 /* eslint-disable no-undef */
-import { BASIC_FETCH_UL_TEST } from "../../constants";
+import {
+  BASIC_FETCH_UL_TEST,
+  BASE_PROJECT_URL,
+  ROUTE_BASIC_FETCH,
+} from "../../constants";
 describe("basic-fetch", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000/basic-fetch");
+    cy.visit(`${BASE_PROJECT_URL}${ROUTE_BASIC_FETCH}`);
   });
   it("List is not empty", () => {
     cy.get(`${BASIC_FETCH_UL_TEST} > li`).should("have.length", 4);

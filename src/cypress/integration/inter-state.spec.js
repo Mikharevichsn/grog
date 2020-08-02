@@ -1,10 +1,16 @@
 /* eslint-disable no-undef */
-import { DIV_TEST, BUTTON_TEST, INPUT_TEST } from "../../constants";
+import {
+  DIV_TEST,
+  BUTTON_TEST,
+  INPUT_TEST,
+  BASE_PROJECT_URL,
+  ROUTE_INTER_STATE,
+} from "../../constants";
 
 describe("inter-state", () => {
   const text = "privet";
   beforeEach(() => {
-    cy.visit("http://localhost:3000/inter-state");
+    cy.visit(`${BASE_PROJECT_URL}${ROUTE_INTER_STATE}`);
   });
   it("input can be modified", () => {
     cy.get(INPUT_TEST).type(text);

@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from "react";
-const url = "https://swapi.dev/api/planets/1"
+import { FETCH_URL_JSON_SERVER, EXAMPLE_CLASS } from "../../constants";
 
-// Пример задания: сделайте запрос по ручке(url)
+// Пример задания: сделайте запрос по ручке(FETCH_URL_JSON_SERVER)
+// Отрисуйте пришедшее имя в формате "Имя: Вася"(EXAMPLE_CLASS)
 
-const Example = (props) => {
+const Example = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch(url)
+    fetch(FETCH_URL_JSON_SERVER + "1")
       .then((resp) => resp.json())
       .then((data) => setData(data));
   }, [setData]);
 
-  return <div>{JSON.stringify(data)}</div>;
+  return <div className={EXAMPLE_CLASS}>{data && `Имя: ${data.author}`}</div>;
 };
 
 export default Example;
