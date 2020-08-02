@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import BasicFetch from "./components/BasicFetch/BasicFetch";
 import BasicState from "./components/BasicState/BasicState";
 import InterState from "./components/InterState/InterState";
+import Example from "./components/Example/Example";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
       </Route>
       <Route path="/inter-state">
         <InterState />
+      </Route>
+      <Route to="/">
+        <Example />
       </Route>
     </Switch>
   );

@@ -1,1 +1,7 @@
-{}
+{
+    "fileServerFolder": "./src/cypress",
+    "fixturesFolder": "./src/cypress/fixtures",
+    "integrationFolder": "./src/cypress/integration",
+    "pluginsFile": "./src/cypress/plugins",
+    "supportFile": "./src/cypress/support"
+}
