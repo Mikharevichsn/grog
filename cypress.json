@@ -4,5 +4,5 @@
     "integrationFolder": "./src/cypress/integration",
     "pluginsFile": "./src/cypress/plugins",
     "supportFile": "./src/cypress/support",
-    "watchForFileChanges": false
+    "defaultCommandTimeout": 1000
 }

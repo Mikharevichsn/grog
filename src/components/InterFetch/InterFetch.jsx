@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { DIV_CLASS, FORM_CLASS, FETCH_URL_JSON_SERVER, INPUT_CLASS } from "../../constants";
 
 // Создай форму(FORM_CLASS) c input(INPUT_CLASS) и сделай запрос методом GET
@@ -8,31 +8,5 @@ import { DIV_CLASS, FORM_CLASS, FETCH_URL_JSON_SERVER, INPUT_CLASS } from "../..
 // в диве(DIV_CLASS) формате Author: ... Title ...
 
 export default function InterFetch(props) {
-  const [value, setValue] = useState("");
-  const [result, setResult] = useState("");
-
-  return (
-    <>
-      <form
-        className={FORM_CLASS}
-        onSubmit={(e) => {
-          e.preventDefault();
-          fetch(`${FETCH_URL_JSON_SERVER}?author=` + value)
-            .then((resp) => resp.json())
-            .then((data) => setResult(data[0]));
-        }}
-      >
-        <input
-          name="name"
-          className={INPUT_CLASS}
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-        />
-        <input type="submit" />
-      </form>
-      <div className={DIV_CLASS}>
-        {result && `Author: ${result.author} Title: ${result.title}`}
-      </div>
-    </>
-  );
+  return <div>hello 4</div>
 }
