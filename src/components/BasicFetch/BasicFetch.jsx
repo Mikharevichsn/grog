@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { BASIC_FETCH_UL_CLASS, FETCH_URL_JSON_SERVER } from "../../constants";
+import { UL_CLASS, FETCH_URL_JSON_SERVER } from "../../constants";
 
-// Сделайте запрос в базу данных localhost:3001/posts
-// Отрендерите каждый пост в формате ul>li
-// Например "Автор: Вася, title: привет"
+// Сделайте запрос в базу данных FETCH_URL_JSON_SERVER
+// Отрендерите каждый пост в листе(UL_CLASS) в формате
+// "Автор: Вася, title: привет"
 
 export function BasicFetch() {
   const [data, setData] = useState(null);
@@ -15,7 +15,7 @@ export function BasicFetch() {
 
   return (
     <div>
-      <ul className={BASIC_FETCH_UL_CLASS}>
+      <ul className={UL_CLASS}>
         {data &&
           data.map((item) => {
             return (
