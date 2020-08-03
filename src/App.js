@@ -8,32 +8,41 @@ import {
   ROUTE_BASIC_FETCH,
   ROUTE_BASIC_STATE,
   ROUTE_INTER_STATE,
+  ROUTE_INTER_FETCH,
 } from "./constants";
+import style from "./App.module.css";
+import InterFetch from "./components/InterFetch/InterFetch";
 
 function App() {
   return (
-    <>
-      <div>
+    <div className={style.container}>
+      <div className={style.navbar}>
         <Link to="/">Home</Link>
         <Link to={ROUTE_BASIC_STATE}> {ROUTE_BASIC_STATE} </Link>
         <Link to={ROUTE_BASIC_FETCH}> {ROUTE_BASIC_FETCH} </Link>
         <Link to={ROUTE_INTER_STATE}> {ROUTE_INTER_STATE} </Link>
+        <Link to={ROUTE_INTER_FETCH}> {ROUTE_INTER_FETCH} </Link>
       </div>
-      <Switch>
-        <Route path={ROUTE_BASIC_STATE}>
-          <BasicState />
-        </Route>
-        <Route path={ROUTE_BASIC_FETCH}>
-          <BasicFetch />
-        </Route>
-        <Route path={ROUTE_INTER_STATE}>
-          <InterState />
-        </Route>
-        <Route to="/">
-          <Example />
-        </Route>
-      </Switch>
-    </>
+      <div>
+        <Switch>
+          <Route path={ROUTE_INTER_FETCH}>
+            <InterFetch />
+          </Route>
+          <Route path={ROUTE_BASIC_STATE}>
+            <BasicState />
+          </Route>
+          <Route path={ROUTE_BASIC_FETCH}>
+            <BasicFetch />
+          </Route>
+          <Route path={ROUTE_INTER_STATE}>
+            <InterState />
+          </Route>
+          <Route to="/">
+            <Example />
+          </Route>
+        </Switch>
+      </div>
+    </div>
   );
 }
 

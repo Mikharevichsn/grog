@@ -16,7 +16,7 @@ describe("basic-fetch", () => {
       cy
         .wrap(el)
         .contains("автор", { matchCase: false })
-        .and("contain", "title")
+        .contains("title", { matchCase: false })
     );
   });
 });
